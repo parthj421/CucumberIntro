@@ -14,11 +14,20 @@ public class cucumberTest {
 	@Given("^Card details of BarclayCard (.*) is available$")
 	public void card_details_of_BarclayCard_is_available(int cardNumber) throws Throwable {
 		
-		Scanner input = new Scanner (new File ("Bcard1.txt"));
+		Scanner input = new Scanner (new File ("Bcard" + cardNumber + ".txt"));
 		
-		System.out.println(input);
-
+		while (input.hasNext())
+		{
+			String a = input.next();
+			System.out.println(a);
+			
+		}
+		//System.out.println(input);
+		input.close();	
 	}
+	
+	
+
 
 	@When("^Card is tapped on the FrontOffice validator$")
 	public void caard_is_tapped_on_the_FrontOffice_validator() throws Throwable {

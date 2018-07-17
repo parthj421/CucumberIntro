@@ -16,9 +16,18 @@ public class cucumberTest {
 		
 		Scanner input = new Scanner (new File ("Bcard1.txt"));
 		
-		System.out.println(input);
-
+		while (input.hasNext())
+		{
+			String a = input.next();
+			System.out.println(a);
+			
+		}
+		//System.out.println(input);
+		input.close();	
 	}
+	
+	
+
 
 	@When("^Card is tapped on the FrontOffice validator$")
 	public void caard_is_tapped_on_the_FrontOffice_validator() throws Throwable {

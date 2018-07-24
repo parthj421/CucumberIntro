@@ -2,6 +2,9 @@ package stepDefinition;
 
 import java.io.File;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.json.JSONObject;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -43,6 +46,7 @@ public class cucumberTest {
 	@Then("^Pre-Auth PEM logs should match with the expected data$")
 	public void pre_Auth_PEM_logs_should_match_with_the_expected_data() throws Throwable {
 		
+		
 		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard1.txt"));
 		
 		String pem = null;
@@ -51,12 +55,28 @@ public class cucumberTest {
 		while (input.hasNext())
 		{
 			pem = input.nextLine();
-			completePEM = completePEM + pem;
+			completePEM = completePEM + pem + "\n";
 		}
+		
 		input.close();	
 		
-		System.out.println(completePEM);
+//		System.out.println("Complete PEM File: " + completePEM);
 		
+		
+		//Pattern pattern = Pattern.compile("/pemauthemv(.*?) \\(D\\)");  TO ESCAPE the () in Regular Expression
+		Pattern pattern = Pattern.compile("\\[P063:B2:002\\] (.*?)\n");
+		
+		Matcher match = pattern.matcher(completePEM);
+		
+		if (match.find())
+		{
+			System.out.println("Matching Value: " +  match.group(1));
+		}
+		
+		else {
+			System.out.println("No Match Found");
+		}
+			
 
 	}
 

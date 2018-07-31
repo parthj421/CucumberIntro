@@ -6,6 +6,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.json.JSONObject;
+import org.junit.Assert;
+
+import BaseUtil.BaseUtil;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,17 +16,24 @@ import helperClass.helperClass;
 
 
 
-public class cucumberTest {
+public class cucumberTest extends BaseUtil{
 	
 	
+	private BaseUtil base;
+	
+	public cucumberTest(BaseUtil base) {
+		this.base = base;
+	}
 	
 	@Given("^Card details of (.*) (.*) is available$")
 	public void card_details_of_BarclayCard_is_available(String cardScheme, int cardNumber) throws Throwable {
 		
 		
-		helperClass helpClass = new helperClass();
+		helperClass helpClass = new helperClass(base);
 		
 		JSONObject emvJson = helpClass.getEmvJson(cardScheme, cardNumber);
+		
+		base.emvCard = emvJson;
 		
 		String emv4F = helpClass.getEmvTags(emvJson, "4F");
 		
@@ -60,10 +70,9 @@ public class cucumberTest {
 		
 		input.close();	
 		
-//		System.out.println("Complete PEM File: " + completePEM);
-		
-		
+		//System.out.println("Complete PEM File: " + completePEM);
 		//Pattern pattern = Pattern.compile("/pemauthemv(.*?) \\(D\\)");  TO ESCAPE the () in Regular Expression
+		
 		Pattern pattern = Pattern.compile("\\[P063:B2:002\\] (.*?)\n");
 		
 		Matcher match = pattern.matcher(completePEM);
@@ -76,6 +85,12 @@ public class cucumberTest {
 		else {
 			System.out.println("No Match Found");
 		}
+		
+		helperClass helpClass = new helperClass(base);
+		
+		boolean B2Status = helpClass.validateB2Token(completePEM, base.emvCard);
+
+		Assert.assertTrue("B2 Token is not valid", B2Status);
 			
 
 	}

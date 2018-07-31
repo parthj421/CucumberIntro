@@ -29,6 +29,25 @@
 	    <artifactId>cucumber-java</artifactId>
 	    <version>1.2.4</version>
 	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+	<dependency>
+	    <groupId>io.rest-assured</groupId>
+	    <artifactId>rest-assured</artifactId>
+	    <version>3.0.0</version>	    
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>20180130</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-picocontainer</artifactId>
+	    <version>1.2.5</version>  
+	</dependency>
   
   </dependencies>
   

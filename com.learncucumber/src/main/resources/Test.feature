@@ -24,7 +24,7 @@ Feature: Account Holder withdraws cash
 	     Given Card details of BarclayCard 1 is available
 	     When Card is tapped on the FrontOffice validator
 	     Then A tap should happen
-	     And Pre-Auth PEM logs should match with the expected data
+	     And PreAuth PEM logs should match with the expected data
      
      
      

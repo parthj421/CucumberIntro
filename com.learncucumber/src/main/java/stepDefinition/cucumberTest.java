@@ -35,8 +35,6 @@ public class cucumberTest extends BaseUtil{
 		
 		base.emvCard = emvJson;
 		
-		String emv4F = helpClass.getEmvTags(emvJson, "4F");
-		
 		String emv9F03 = helpClass.getEmvTags(emvJson,"9F1A");
 		
 		System.out.println("Value of EMV-9F03 is: " + emv9F03);
@@ -53,8 +51,8 @@ public class cucumberTest extends BaseUtil{
 
 	}
 
-	@Then("^Pre-Auth PEM logs should match with the expected data$")
-	public void pre_Auth_PEM_logs_should_match_with_the_expected_data() throws Throwable {
+	@Then("^(.*?) PEM logs should match with the expected data$")
+	public void pre_Auth_PEM_logs_should_match_with_the_expected_data(String authRequestType) throws Throwable {
 		
 		
 		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard1.txt"));
@@ -71,28 +69,26 @@ public class cucumberTest extends BaseUtil{
 		input.close();	
 		
 		//System.out.println("Complete PEM File: " + completePEM);
+		
+		base.PEMlog = completePEM;
+		
 		//Pattern pattern = Pattern.compile("/pemauthemv(.*?) \\(D\\)");  TO ESCAPE the () in Regular Expression
 		
-		Pattern pattern = Pattern.compile("\\[P063:B2:002\\] (.*?)\n");
-		
-		Matcher match = pattern.matcher(completePEM);
-		
-		if (match.find())
-		{
-			System.out.println("Matching Value: " +  match.group(1));
-		}
-		
-		else {
-			System.out.println("No Match Found");
-		}
 		
 		helperClass helpClass = new helperClass(base);
 		
 		boolean B2Status = helpClass.validateB2Token(completePEM, base.emvCard);
 
+		boolean B3Status = helpClass.validateB3Token(completePEM, base.emvCard);
+		
+		boolean B4Status = helpClass.validateB4Token(completePEM, base.emvCard);
+		
+		boolean C4Status = helpClass.validateC4Token(completePEM, base.emvCard);
+		
 		Assert.assertTrue("B2 Token is not valid", B2Status);
-			
-
+		Assert.assertTrue("B3 Token is not valid", B3Status);
+		Assert.assertTrue("B4 Token is not valid", B4Status);	
+		Assert.assertTrue("C4 Token is not valid", C4Status);
 	}
 
 }

@@ -21,7 +21,7 @@ Feature: Account Holder withdraws cash
       
    	@Priority-high     
      Scenario: Sending Tap from Front Office
-	     Given Card details of BarclayCard 1 is available
+	     Given Card details of Visa BarclayCard 1 is available
 	     When Card is tapped on the FrontOffice validator
 	     Then A tap should happen
 	     And PreAuth PEM logs should match with the expected data

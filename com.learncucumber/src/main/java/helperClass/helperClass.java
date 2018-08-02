@@ -291,7 +291,92 @@ public class helperClass extends BaseUtil {
 		//P063:C4:005 is same as "0"		
 		C4validation = comparePEMwithEMVTag("P063:C4:005", "0","Y") & C4validation;
 		
+		//P063:C4:006 is "9" for Visa/MasterCard Account Verification(PreAuth) Request, "0" for Visa/MasterCard EODAuth Request
+		
+		switch(base.requestType.toLowerCase() ) {
+		case "preauth" :  
+			C4validation = comparePEMwithEMVTag("P063:C4:006", "9","Y") & C4validation;
+			break;
+		case "eodauth" :  
+			C4validation = comparePEMwithEMVTag("P063:C4:006", "0","Y") & C4validation;
+			break;
+		}
+
+		//P063:C4:007 is same as "0"		
+		C4validation = comparePEMwithEMVTag("P063:C4:007", "0","Y") & C4validation;
+		
+		//P063:C4:008 is 0 for Visa and "0" for PreAuth MasterCard and "9" for EODAuth Mastercard
+		if(base.cardScheme.toLowerCase() == "visa") {
+			C4validation = comparePEMwithEMVTag("P063:C4:008", "0","Y") & C4validation;
+		}
+		
+		else if (base.cardScheme.toLowerCase() == "mastercard") {		
+			switch(base.requestType.toLowerCase() ) {
+				case "preauth" :  
+					C4validation = comparePEMwithEMVTag("P063:C4:008", "0","Y") & C4validation;
+					break;
+				case "eodauth" :  
+					C4validation = comparePEMwithEMVTag("P063:C4:008", "9","Y") & C4validation;
+					break;
+			}
+		}
+		
+		//P063:C4:009 is same as "2"	
+		C4validation = comparePEMwithEMVTag("P063:C4:009", "2","Y") & C4validation;
+		//P063:C4:010 is same as "3"	
+		C4validation = comparePEMwithEMVTag("P063:C4:010", "3","Y") & C4validation;
+		//P063:C4:011 is same as "3"	
+		C4validation = comparePEMwithEMVTag("P063:C4:011", "3","Y") & C4validation;
 		return C4validation;
+	}
+	
+	
+	public boolean validateAuthRequest(String PEMlog, JSONObject emvCard) throws Throwable {
+
+		boolean authReqValidation = true;
+	
+		//P000 is same as "0100"		
+		authReqValidation = comparePEMwithEMVTag("P000", "0100","Y") & authReqValidation;
+		//P002 is same as Emv tag 5A		
+		authReqValidation = comparePEMwithEMVTag("P002", "5A","N") & authReqValidation;		
+		
+		//P003 is same as "81000" for PreAuth, "000000" for EODAuth and "200000" for refund
+		switch(base.requestType.toLowerCase() ) {
+		case "preauth" :  
+			authReqValidation = comparePEMwithEMVTag("P003", "81000","Y") & authReqValidation;
+			break;
+		case "eodauth" :  
+			authReqValidation = comparePEMwithEMVTag("P003", "000000","Y") & authReqValidation;
+			break;
+		case "refund" :  
+			authReqValidation = comparePEMwithEMVTag("P003", "200000","Y") & authReqValidation;
+			break;
+		}
+		
+		//P004 is same as transaction amount
+		switch(base.requestType.toLowerCase() ) {
+		case "preauth" :  
+			authReqValidation = comparePEMwithEMVTag("P004", "000000000000","Y") & authReqValidation;
+			break;
+		case "eodauth" :  
+			authReqValidation = comparePEMwithEMVTag("P004", base.txnAmount,"Y") & authReqValidation;
+			break;
+		case "refund" :  
+			authReqValidation = comparePEMwithEMVTag("P004", base.txnAmount,"Y") & authReqValidation;
+			break;
+		}
+		
+		//P007 is same txn Date and Time
+		//P012 is same txn Time
+		//P013 is same txn Date
+		//P013 is same Exp Date
+		
+		//P022 is same as "072"
+		authReqValidation = comparePEMwithEMVTag("P022", "072","Y") & authReqValidation;
+		//P023 is same as Emv Tag 5F34
+		authReqValidation = comparePEMwithEMVTag("P022", "5F34","N") & authReqValidation;
+		
+		return authReqValidation;
 	}
 
 }

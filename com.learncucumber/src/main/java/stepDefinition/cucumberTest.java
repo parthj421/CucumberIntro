@@ -25,15 +25,16 @@ public class cucumberTest extends BaseUtil{
 		this.base = base;
 	}
 	
-	@Given("^Card details of (.*) (.*) is available$")
-	public void card_details_of_BarclayCard_is_available(String cardScheme, int cardNumber) throws Throwable {
+	@Given("^Card details of (.*) (.*) (.*) is available$")
+	public void card_details_of_BarclayCard_is_available(String cardScheme, String cardName, int cardNumber) throws Throwable {
 		
 		
 		helperClass helpClass = new helperClass(base);
 		
-		JSONObject emvJson = helpClass.getEmvJson(cardScheme, cardNumber);
+		JSONObject emvJson = helpClass.getEmvJson(cardName, cardNumber);
 		
 		base.emvCard = emvJson;
+		base.cardScheme = cardScheme;
 		
 		String emv9F03 = helpClass.getEmvTags(emvJson,"9F1A");
 		
@@ -53,12 +54,12 @@ public class cucumberTest extends BaseUtil{
 
 	@Then("^(.*?) PEM logs should match with the expected data$")
 	public void pre_Auth_PEM_logs_should_match_with_the_expected_data(String authRequestType) throws Throwable {
-		
-		
-		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard1.txt"));
-		
+				
 		String pem = null;
 		String completePEM = "" ;
+		base.requestType = authRequestType;
+		
+		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard1.txt"));
 		
 		while (input.hasNext())
 		{
@@ -85,10 +86,13 @@ public class cucumberTest extends BaseUtil{
 		
 		boolean C4Status = helpClass.validateC4Token(completePEM, base.emvCard);
 		
+		boolean authReqStatus = helpClass.validateAuthRequest(completePEM, base.emvCard);
+		
 		Assert.assertTrue("B2 Token is not valid", B2Status);
 		Assert.assertTrue("B3 Token is not valid", B3Status);
 		Assert.assertTrue("B4 Token is not valid", B4Status);	
 		Assert.assertTrue("C4 Token is not valid", C4Status);
+		Assert.assertTrue("Auth Request is not valid", authReqStatus);
 	}
 
 }

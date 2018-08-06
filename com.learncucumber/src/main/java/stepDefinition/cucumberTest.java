@@ -35,6 +35,7 @@ public class cucumberTest extends BaseUtil{
 		
 		base.emvCard = emvJson;
 		base.cardScheme = cardScheme;
+		base.cardNumber = Integer.toString(cardNumber);
 		
 		String emv9F03 = helpClass.getEmvTags(emvJson,"9F1A");
 		
@@ -59,7 +60,7 @@ public class cucumberTest extends BaseUtil{
 		String completePEM = "" ;
 		base.requestType = authRequestType;
 		
-		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard1.txt"));
+		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard" + base.cardNumber + ".txt"));
 		
 		while (input.hasNext())
 		{
@@ -93,6 +94,11 @@ public class cucumberTest extends BaseUtil{
 		Assert.assertTrue("B4 Token is not valid", B4Status);	
 		Assert.assertTrue("C4 Token is not valid", C4Status);
 		Assert.assertTrue("Auth Request is not valid", authReqStatus);
+		
+		if(completePEM.contains("TOKEN QE")) {
+			boolean QEStatus = helpClass.validateQEToken(completePEM, base.emvCard);
+			Assert.assertTrue("QE Token is not valid", QEStatus);
+		}
 	}
 
 }

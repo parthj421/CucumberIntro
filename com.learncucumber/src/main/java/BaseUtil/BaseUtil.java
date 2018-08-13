@@ -10,6 +10,7 @@ public class BaseUtil {
 	public String cardScheme;
 	public String cardNumber;
 	public String txnAmount;	
+	public String partialURL;
 	
 
 }

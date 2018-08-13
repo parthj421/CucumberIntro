@@ -13,6 +13,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import helperClass.helperClass;
+import helperClass.readPropertyFile;
 
 
 
@@ -45,6 +46,9 @@ public class cucumberTest extends BaseUtil{
 	
 	@When("^Card is tapped on the FrontOffice validator$")
 	public void caard_is_tapped_on_the_FrontOffice_validator() throws Throwable {
+		
+		readPropertyFile prop = new readPropertyFile(base);
+		prop.getPropertyValue();
 
 	}
 

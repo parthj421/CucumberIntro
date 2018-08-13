@@ -56,7 +56,7 @@ Scenario: Sending Tap from Front Office from BarclayCard5
      And PreAuth PEM logs should match with the expected data 
      
      
-           @Priority-high     
+     @Priority-high     
 Scenario: Sending Tap from Front Office from BarclayCard6
      Given Card details of Visa BarclayCard 6 is available
      When Card is tapped on the FrontOffice validator

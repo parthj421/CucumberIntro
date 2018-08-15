@@ -245,7 +245,9 @@ public class helperClass extends BaseUtil {
 
 		boolean B3validation = true;
 
-		// B3:001 Matching with Terminal Id
+		// B3:001 Matching with EMV 9F1E and if 9F1E is not present then should be '00000000'
+		B3validation = ( getEmvTags(emvCard, "9F1E") == null ? comparePEMwithEMVTag("P063:B3:001", "00000000", "Y") : comparePEMwithEMVTag("P063:B3:001", "9F1E", "N") ) & B3validation; 
+		
 		// B3:002 Matching with "00000808"
 		B3validation = comparePEMwithEMVTag("P063:B3:002", "00000808", "Y") & B3validation;
 		// B3:003 Matching with "0000"

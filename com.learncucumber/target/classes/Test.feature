@@ -19,12 +19,47 @@ Feature: Account Holder withdraws cash
  #     | $50 | $50 |  |
  #     | $20 | $80 |  |
       
-   	@Priority-high     
-     Scenario: Sending Tap from Front Office
-	     Given Card details of BarclayCard 1 is available
-	     When Card is tapped on the FrontOffice validator
-	     Then A tap should happen
-	     And Pre-Auth PEM logs should match with the expected data
+	@Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard1
+    Given Card details of Visa BarclayCard 1 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data
+     
+	@Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard2
+     Given Card details of Visa BarclayCard 2 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data  
+     
+     @Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard3
+     Given Card details of Visa BarclayCard 3 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data 
+     
+      @Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard4
+     Given Card details of Visa BarclayCard 4 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data 
      
      
+      @Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard5
+     Given Card details of Visa BarclayCard 5 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data 
+     
+     
+     @Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard6
+     Given Card details of Visa BarclayCard 6 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data 
      

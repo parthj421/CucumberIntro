@@ -1,0 +1,73 @@
+{
+	"sequence" : [
+	   {
+		   "inherits": ["tap.0" ],
+		   "gps_x": 48798735
+	    }
+	],
+   "tap" : {
+      "0" : {
+         "agency_id" : 0,
+         "card_type" : 1,
+         "cd_version" : 0,
+         "currency_indicator" : "gbp",
+         "decode" : {
+            "SysComHdr.formatVersion" : 2622208,
+            "SysComHdr.reconciliationDate" : 0,
+            "SysComHdr.samId" : 55,
+            "timestamp" : "2018-07-11T10:49:44",
+            "ud_decoder" : "techgp-00154",
+            "udsn" : 384
+         },
+         "device_id" : 197988,
+         "device_location_id" : 1004,
+         "direction" : 0,
+         "discount" : 0,
+         "emv" : {
+            "4F" : "A0000000031010",
+            "57" : "4929409874563244D30122010098800000001F",
+            "5A" : "4929409874563244",
+            "5F24" : "301231",
+            "5F34" : "01",
+            "82" : "2000",
+            "84" : "A0000000031010",
+            "95" : "0000000000",
+            "9C" : "00",
+            "9F02" : "000000000000",
+            "9F03" : "000000000000",
+            "9F06" : "A0000000031010",
+            "9F09" : "0002",
+            "9F10" : "06011103A00000",
+            "9F1A" : "0826",
+
+            "9F26" : "99FCF5BDFB18220F",
+            "9F27" : "80",
+            "9F34" : "000000",
+            "9F35" : "25",
+            "9F36" : "0003",
+            "9F37" : "006D91AE",
+            "9F6E" : "20700000",
+	    "9F7C" : "30700000"
+         },
+         "fare_model" : "2",
+         "finalisation_disposition" : "as_per_outcome",
+         "gps_x" : 56546667,
+         "gps_y" : 65546667,
+         "location_id" : 1104,
+         "location_id_name" : "tes",
+         "route_id" : 110,
+         "sales_tax" : 0,
+         "service_participant_id" : 0,
+         "service_type" : 1,
+         "source_participant_id" : 0,
+         "tax_rate_perc" : 0,
+         "test_mode" : false,
+         "transact_outcome" : "approved",
+         "transact_result" : 8005,
+         "transaction_value" : 0,
+         "transit_cd_version" : 0,
+         "transit_device_id" : 1,
+         "type" : "offline_approved"
+      }
+   }
+}

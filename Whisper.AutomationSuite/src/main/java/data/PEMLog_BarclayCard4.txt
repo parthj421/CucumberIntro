@@ -17,7 +17,7 @@ Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 [P063:B2:012] 00
 Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 [P063:B2:013] 633FCFD9
 Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 [P063:B2:016] 000706011103A0000000000000000000000000000000000000000000000000000000
 Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 --------------- TOKEN B3 ---------------
-Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 [P063:B3:001] 90011311
+Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 [P063:B3:001] 00000000
 Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 [P063:B3:002] 00000808
 Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 [P063:B3:003] 0000
 Aug  9 03:47:30 /afc/bin/pemauthemv[14516] (D) RRN 7 CSN 90 [P063:B3:004] 00000000

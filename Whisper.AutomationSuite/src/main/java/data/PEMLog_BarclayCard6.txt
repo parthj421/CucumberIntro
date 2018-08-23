@@ -17,7 +17,7 @@ Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P063:B2:012] 00
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P063:B2:013] 49E53845
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P063:B2:016] 000706011103A0000000000000000000000000000000000000000000000000000000
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 --------------- TOKEN B3 ---------------
-Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P063:B3:001] 90011311
+Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P063:B3:001] 00000000
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P063:B3:002] 00000808
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P063:B3:003] 0000
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P063:B3:004] 00000000

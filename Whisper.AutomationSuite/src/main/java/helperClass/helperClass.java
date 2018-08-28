@@ -322,11 +322,11 @@ public class helperClass extends BaseUtil {
 		C4validation = comparePEMwithEMVTag("P063:C4:007", "0", "Y") & C4validation;
 
 		// P063:C4:008 is 0 for Visa and "0" for PreAuth MasterCard and "9" for EODAuth Mastercard
-		if (base.cardScheme.toLowerCase() == "visa") {
+		if (base.cardScheme.equalsIgnoreCase("visa")) {
 			C4validation = comparePEMwithEMVTag("P063:C4:008", "0", "Y") & C4validation;
 		}
 
-		else if (base.cardScheme.toLowerCase() == "mastercard") {
+		else if (base.cardScheme.equalsIgnoreCase("mastercard")) {
 			switch (base.requestType.toLowerCase()) {
 			case "preauth":
 				C4validation = comparePEMwithEMVTag("P063:C4:008", "0", "Y") & C4validation;
@@ -392,11 +392,17 @@ public class helperClass extends BaseUtil {
 		// P002 is same as Emv tag 5A
 		authReqValidation = comparePEMwithEMVTag("P002", "5A", "N") & authReqValidation;
 
-		// P003 is same as "81000" for PreAuth, "000000" for EODAuth and "200000" for
-		// refund
+		// P003 is same as "81000" for Visa PreAuth and "000000" Mastercard PreAuth, "000000" for Visa EODAuth and "200000" for Visa refund
+		
 		switch (base.requestType.toLowerCase()) {
 		case "preauth":
-			authReqValidation = comparePEMwithEMVTag("P003", "810000", "Y") & authReqValidation;
+			if (base.cardScheme.equalsIgnoreCase("visa")) {
+				authReqValidation = comparePEMwithEMVTag("P003", "810000", "Y") & authReqValidation;
+			}
+			
+			else if (base.cardScheme.equalsIgnoreCase("mastercard")) {
+				authReqValidation = comparePEMwithEMVTag("P003", "000000", "Y") & authReqValidation;	
+			}
 			break;
 		case "eodauth":
 			authReqValidation = comparePEMwithEMVTag("P003", "000000", "Y") & authReqValidation;
@@ -406,10 +412,19 @@ public class helperClass extends BaseUtil {
 			break;
 		}
 
-		// P004 is same as transaction amount
+		
+		// P004 is same as transaction amount. PreAuth Visa it's "000000000000" and PreAuth Mastercard it's "000000000010"
 		switch (base.requestType.toLowerCase()) {
 		case "preauth":
-			authReqValidation = comparePEMwithEMVTag("P004", "000000000000", "Y") & authReqValidation;
+			
+				if (base.cardScheme.equalsIgnoreCase("visa")) {
+					authReqValidation = comparePEMwithEMVTag("P004", "000000000000", "Y") & authReqValidation;
+				}
+				
+				else if (base.cardScheme.equalsIgnoreCase("mastercard")) {
+					authReqValidation = comparePEMwithEMVTag("P004", "000000000010", "Y") & authReqValidation;	
+				}
+			
 			break;
 		case "eodauth":
 			authReqValidation = comparePEMwithEMVTag("P004", base.txnAmount, "Y") & authReqValidation;
@@ -450,9 +465,8 @@ public class helperClass extends BaseUtil {
 		// P041 is same as Terminal id from the Request
 
 		// P043 should be same as "Tfgm                  Manchester      GB"
-		// authReqValidation = comparePEMwithEMVTag("P043", "Tfgm                  Manchester      GB","Y") &
-		// authReqValidation;
-
+		 authReqValidation = comparePEMwithEMVTag("P043", "Tfgm                  Manchester      GB","Y") &  authReqValidation;
+		
 		// P049 is same as 9F1A
 		authReqValidation = PEMcontainsEMVTag("P049", "9F1A", "EMV") & authReqValidation;
 		// P125 is same as 9F1A

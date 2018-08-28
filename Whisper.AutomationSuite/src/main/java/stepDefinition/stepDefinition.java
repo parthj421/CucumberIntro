@@ -17,12 +17,12 @@ import helperClass.readPropertyFile;
 
 
 
-public class cucumberTest extends BaseUtil{
+public class stepDefinition extends BaseUtil{
 	
 	
 	private BaseUtil base;
 	
-	public cucumberTest(BaseUtil base) {
+	public stepDefinition(BaseUtil base) {
 		this.base = base;
 	}
 	

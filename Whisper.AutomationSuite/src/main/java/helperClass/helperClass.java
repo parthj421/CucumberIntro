@@ -83,8 +83,7 @@ public class helperClass extends BaseUtil {
 			}
 
 			if (!pemTagValue.equalsIgnoreCase(emvTagValue)) {
-				System.out.println(pemTag + " is not matching with " + emvTag + ". Expected: " + emvTagValue
-						+ " Actual: " + pemTagValue);
+				System.out.println("***** " +pemTag + " is not matching with " + emvTag + ". Expected: " + emvTagValue + " Actual: " + pemTagValue + " *****");
 				// assertEquals("P063:B2:001 is not matching. Expected:0000 Actual:"+
 				// pemTagValue ,emvTagValue, pemTagValue);
 				isMatch = false;
@@ -133,19 +132,19 @@ public class helperClass extends BaseUtil {
 				String pemTagValue2 = match1.group(1);
 
 				if (!pemTagValue1.equalsIgnoreCase(pemTagValue2)) {
-					System.out.println(pemTag1 + " is not matching with " + pemTag2);
+					System.out.println("***** "+ pemTag1 + " is not matching with " + pemTag2 + " *****");
 					isMatch = false;
 				}
 			}
 
 			else {
-				System.out.println(pemTag2 + " is not in PEM logs");
+				System.out.println("***** "+ pemTag2 + " is not in PEM logs *****");
 				isMatch = false;
 			}
 		}
 
 		else {
-			System.out.println(pemTag1 + " is not in PEM logs");
+			System.out.println("***** "+ pemTag1 + " is not in PEM logs *****");
 			isMatch = false;
 		}
 		return isMatch;
@@ -176,8 +175,8 @@ public class helperClass extends BaseUtil {
 			if (biggerString.equalsIgnoreCase("PEM")) {
 
 				if (!pemTagValue.contains(emvTagValue)) {
-					System.out.println(pemTag + " is not containing " + emvTag + ". Expected: " + emvTagValue
-							+ " Actual: " + pemTagValue);
+					System.out.println("***** "+ pemTag + " is not containing " + emvTag + ". Expected: " + emvTagValue
+							+ " Actual: " + pemTagValue + " *****");
 					// assertEquals("P063:B2:001 is not matching. Expected:0000 Actual:"+
 					// pemTagValue ,emvTagValue, pemTagValue);
 					isMatch = false;
@@ -188,8 +187,8 @@ public class helperClass extends BaseUtil {
 			else if (biggerString.equalsIgnoreCase("EMV")) {
 
 				if (!emvTagValue.contains(pemTagValue)) {
-					System.out.println(emvTag + " is not containing " + pemTag + ". Expected: " + emvTagValue
-							+ " Actual: " + pemTagValue);
+					System.out.println("***** " + emvTag + " is not containing " + pemTag + ". Expected: " + emvTagValue
+							+ " Actual: " + pemTagValue + " ***** ");
 					// assertEquals("P063:B2:001 is not matching. Expected:0000 Actual:"+
 					// pemTagValue ,emvTagValue, pemTagValue);
 					isMatch = false;
@@ -198,7 +197,7 @@ public class helperClass extends BaseUtil {
 		}
 
 		else {
-			System.out.println(pemTag + " is not in PEM logs");
+			System.out.println("***** " + pemTag + " is not in PEM logs *****");
 			isMatch = false;
 		}
 
@@ -258,14 +257,21 @@ public class helperClass extends BaseUtil {
 		B3validation = comparePEMwithEMVTag("P063:B3:005", "9F35", "N") & B3validation;
 		// B3:006 Matching with EMV tag 9F09
 		B3validation = comparePEMwithEMVTag("P063:B3:006", "9F09", "N") & B3validation;
-		// B3:007 Matching with EMV tag 9F34
+		// B3:007 Matching with EMV tag 9F34 for Mastercard and "000000" for Visa
+		// B3:008 contains with EMV tag 84 for Mastercard and "000000000000000000000000000000000000" for Visa
+		
+		if (base.cardScheme.equalsIgnoreCase("mastercard")) {
 		B3validation = comparePEMwithEMVTag("P063:B3:007", "9F34", "N") & B3validation;
-		// B3:008 contains with EMV tag 84
 		B3validation = PEMcontainsEMVTag("P063:B3:008", "84", "PEM") & B3validation;
-
+		}
+		
+		else if (base.cardScheme.equalsIgnoreCase("visa")) {
+		B3validation = comparePEMwithEMVTag("P063:B3:007", "000000", "Y") & B3validation;
+		B3validation = comparePEMwithEMVTag("P063:B3:008", "000000000000000000000000000000000000", "Y") & B3validation;
+		}
 		return B3validation;
 	}
-
+	
 	public boolean validateB4Token(String PEMlog, JSONObject emvCard) throws Throwable {
 
 		boolean B4validation = true;
@@ -459,8 +465,33 @@ public class helperClass extends BaseUtil {
 
 		}
 
-		// P035 is same as emv tag 57
-		authReqValidation = PEMcontainsEMVTag("P035", "57", "EMV") & authReqValidation;
+		// P035 is same as emv tag 57. Replace 'D' in tag 57 with '=' and compare
+		//authReqValidation = PEMcontainsEMVTag("P035", "57", "EMV") & authReqValidation;
+		
+		String tag57 = getEmvTags(emvCard, "57");
+		String P035 = getPEMTag("P035");
+
+		if (tag57 != null) {
+			tag57 = tag57.replace("D", "=");
+
+			if (!tag57.contains(P035)) {
+				System.out.println("P035 is not matching with EMV tag 57. Expected Value:" + tag57 + " Actual Value:" + P035);
+			}
+			authReqValidation = tag57.contains(P035) & authReqValidation ;
+		}
+		
+		//If emv does not have 57 tag then we will have to generate one
+		else {
+			String date5F24 = getEmvTags(emvCard, "5F24").substring(0, 4);
+			
+			tag57 = getEmvTags(emvCard, "5A") + "=" + date5F24;
+			
+			if (!P035.contains(tag57)) {
+				System.out.println("P035 is not matching with generated partial EMV tag 57. Expected Value:" + tag57 + " Actual Value:" + P035);
+			}
+			authReqValidation = tag57.contains(P035) & authReqValidation ;
+		}
+		
 
 		// P041 is same as Terminal id from the Request
 

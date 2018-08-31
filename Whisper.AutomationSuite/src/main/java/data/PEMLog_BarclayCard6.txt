@@ -72,7 +72,7 @@ Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P022] 072
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P023] 001
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P025] 27
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P032] 1021649
-Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P035] 4761739876543210D30122010098800000001
+Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P035] 4761739876543210=30122010098800000001
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P037] 090904000318
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P041] 90011311
 Aug  9 09:04:11 /afc/bin/pemauthemv[ 3794] (D) RRN 1 CSN 82 [P043] TfGM                  Manchester      GB

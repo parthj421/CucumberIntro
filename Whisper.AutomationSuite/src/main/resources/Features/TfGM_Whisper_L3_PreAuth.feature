@@ -80,3 +80,11 @@ Scenario: Sending Tap from Front Office from BarclayCard8
      And PreAuth PEM logs should match with the expected data 
      
      
+               @Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard9
+     Given Card details of Mastercard BarclayCard 8 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data 
+     
+     

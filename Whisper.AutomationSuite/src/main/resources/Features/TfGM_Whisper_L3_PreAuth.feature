@@ -1,4 +1,4 @@
-Feature: Account Holder withdraws cash
+Feature: PreAuth is validated
     # **In oder to** get money when the bank is closed
     # **As** an Account Holder
     # **I want to** withdraw cash from an ATM
@@ -79,12 +79,6 @@ Scenario: Sending Tap from Front Office from BarclayCard8
      Then A tap should happen
      And PreAuth PEM logs should match with the expected data 
      
-     
-               @Priority-high     
-Scenario: Sending Tap from Front Office from BarclayCard9
-     Given Card details of Mastercard BarclayCard 8 is available
-     When Card is tapped on the FrontOffice validator
-     Then A tap should happen
-     And PreAuth PEM logs should match with the expected data 
+
      
      

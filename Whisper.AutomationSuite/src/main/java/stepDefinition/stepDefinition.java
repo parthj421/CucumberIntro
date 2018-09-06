@@ -64,7 +64,7 @@ public class stepDefinition extends BaseUtil{
 		String completePEM = "" ;
 		base.requestType = authRequestType;
 		
-		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard" + base.cardNumber + ".txt"));
+		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard" + base.cardNumber + "_" + base.requestType + ".txt"));
 		
 		while (input.hasNext())
 		{
@@ -83,26 +83,35 @@ public class stepDefinition extends BaseUtil{
 		
 		helperClass helpClass = new helperClass(base);
 		
-		boolean B2Status = helpClass.validateB2Token(completePEM, base.emvCard);
-
-		boolean B3Status = helpClass.validateB3Token(completePEM, base.emvCard);
-		
-		boolean B4Status = helpClass.validateB4Token(completePEM, base.emvCard);
+		switch (base.requestType.toLowerCase())
+		{
+		case "debtrecovery" :
+			boolean C0Status = helpClass.validateC0Token(completePEM, base.emvCard);
+			Assert.assertTrue("C0 Token is not valid", C0Status);
+		break;
+			
+		default:
+			boolean B2Status = helpClass.validateB2Token(completePEM, base.emvCard);
+			boolean B3Status = helpClass.validateB3Token(completePEM, base.emvCard);	
+			boolean B4Status = helpClass.validateB4Token(completePEM, base.emvCard);
+			Assert.assertTrue("B2 Token is not valid", B2Status);
+			Assert.assertTrue("B3 Token is not valid", B3Status);
+			Assert.assertTrue("B4 Token is not valid", B4Status);	
+				
+			if(completePEM.contains("TOKEN QE")) {
+				boolean QEStatus = helpClass.validateQEToken(completePEM, base.emvCard);
+				Assert.assertTrue("QE Token is not valid", QEStatus);
+			}
+		break;
+		}
 		
 		boolean C4Status = helpClass.validateC4Token(completePEM, base.emvCard);
+		Assert.assertTrue("C4 Token is not valid", C4Status);
 		
 		boolean authReqStatus = helpClass.validateAuthRequest(completePEM, base.emvCard);
-		
-		Assert.assertTrue("B2 Token is not valid", B2Status);
-		Assert.assertTrue("B3 Token is not valid", B3Status);
-		Assert.assertTrue("B4 Token is not valid", B4Status);	
-		Assert.assertTrue("C4 Token is not valid", C4Status);
 		Assert.assertTrue("Auth Request is not valid", authReqStatus);
 		
-		if(completePEM.contains("TOKEN QE")) {
-			boolean QEStatus = helpClass.validateQEToken(completePEM, base.emvCard);
-			Assert.assertTrue("QE Token is not valid", QEStatus);
-		}
+
 	}
 
 }

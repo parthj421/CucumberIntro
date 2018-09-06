@@ -295,6 +295,39 @@ public class helperClass extends BaseUtil {
 
 		return B4validation;
 	}
+	
+	public boolean validateC0Token(String PEMlog, JSONObject emvCard) throws Throwable {
+		
+		boolean C0validation = true;
+		
+		//P063:C0:000 is same as "    " (4 spaces)
+	//	C0validation = comparePEMwithEMVTag("P063:C0:000", "    ", "Y") & C0validation;
+		//P063:C0:001 is same as " "
+	//	C0validation = comparePEMwithEMVTag("P063:C0:001", " ", "Y") & C0validation;
+		//P063:C0:002 is same as "    " (3 spaces)
+	//	C0validation = comparePEMwithEMVTag("P063:C0:002", "   ", "Y") & C0validation;
+		//P063:C0:003 is same as "          " (10 space)
+	//	C0validation  = comparePEMwithEMVTag("P063:C0:003", "          ", "Y") & C0validation;		
+		//P063:C0:004 is same as "1"
+		C0validation  = comparePEMwithEMVTag("P063:C0:004", "1", "Y") & C0validation;		
+		//P063:C0:005 is same as " "
+	//	C0validation  = comparePEMwithEMVTag("P063:C0:005", " ", "Y") & C0validation;		
+		//P063:C0:006 is same as " "
+	//	C0validation  = comparePEMwithEMVTag("P063:C0:006", " ", "Y") & C0validation;
+		//P063:C0:007 is same as "0"
+		C0validation  = comparePEMwithEMVTag("P063:C0:007", "0", "Y") & C0validation;
+		//P063:C0:008 is same as " "
+	//	C0validation  = comparePEMwithEMVTag("P063:C0:008", " ", "Y") & C0validation;		
+		//P063:C0:009 is same as "0"
+		C0validation  = comparePEMwithEMVTag("P063:C0:009", "0", "Y") & C0validation;
+		//P063:C0:010 is same as "0"
+		C0validation  = comparePEMwithEMVTag("P063:C0:010", "0", "Y") & C0validation;
+		//P063:C0:011 is same as " "
+	//	C0validation  = comparePEMwithEMVTag("P063:C0:011", " ", "Y") & C0validation;
+		
+		return C0validation;
+		
+	}
 
 	public boolean validateC4Token(String PEMlog, JSONObject emvCard) throws Throwable {
 
@@ -306,20 +339,29 @@ public class helperClass extends BaseUtil {
 		C4validation = comparePEMwithEMVTag("P063:C4:001", "0", "Y") & C4validation;
 		// P063:C4:002 is same as "0"
 		C4validation = comparePEMwithEMVTag("P063:C4:002", "0", "Y") & C4validation;
-		// P063:C4:003 is same as "0"
-		C4validation = comparePEMwithEMVTag("P063:C4:003", "0", "Y") & C4validation;
-		// P063:C4:004 is same as "0"
-		C4validation = comparePEMwithEMVTag("P063:C4:004", "0", "Y") & C4validation;
+		// P063:C4:003 is same as "0" for PreAuth,EODAuth and "1" for Debt Recovery 
+		// P063:C4:004 is same as "0" for PreAuth,EODAuth and "1" for Debt Recovery
+		switch (base.requestType.toLowerCase()) {
+		case "debtrecovery":
+			C4validation = comparePEMwithEMVTag("P063:C4:003", "1", "Y") & C4validation;
+			C4validation = comparePEMwithEMVTag("P063:C4:004", "1", "Y") & C4validation;
+			break;
+		default:
+			C4validation = comparePEMwithEMVTag("P063:C4:003", "0", "Y") & C4validation;
+			C4validation = comparePEMwithEMVTag("P063:C4:004", "0", "Y") & C4validation;
+			break;
+		}
+		
 		// P063:C4:005 is same as "0"
 		C4validation = comparePEMwithEMVTag("P063:C4:005", "0", "Y") & C4validation;
 
-		// P063:C4:006 is "9" for Visa/MasterCard Account Verification(PreAuth) Request, "0" for Visa/MasterCard EODAuth Request
+		// P063:C4:006 is "9" for Visa/MasterCard Account Verification(PreAuth) Request, "0" for Visa/MasterCard EODAuth Request and Debt Recovery
 
 		switch (base.requestType.toLowerCase()) {
 		case "preauth":
 			C4validation = comparePEMwithEMVTag("P063:C4:006", "9", "Y") & C4validation;
 			break;
-		case "eodauth":
+		default:
 			C4validation = comparePEMwithEMVTag("P063:C4:006", "0", "Y") & C4validation;
 			break;
 		}
@@ -327,7 +369,7 @@ public class helperClass extends BaseUtil {
 		// P063:C4:007 is same as "0"
 		C4validation = comparePEMwithEMVTag("P063:C4:007", "0", "Y") & C4validation;
 
-		// P063:C4:008 is 0 for Visa and "0" for PreAuth MasterCard and "9" for EODAuth Mastercard
+		// P063:C4:008 is 0 for Visa and "0" for PreAuth MasterCard and "9" for EODAuth Mastercard and "0" for Debt Recovery
 		if (base.cardScheme.equalsIgnoreCase("visa")) {
 			C4validation = comparePEMwithEMVTag("P063:C4:008", "0", "Y") & C4validation;
 		}
@@ -340,13 +382,28 @@ public class helperClass extends BaseUtil {
 			case "eodauth":
 				C4validation = comparePEMwithEMVTag("P063:C4:008", "9", "Y") & C4validation;
 				break;
+			case "debtrecovery":
+				C4validation = comparePEMwithEMVTag("P063:C4:008", "0", "Y") & C4validation;
+				break;	
 			}
+		}
+		
+		else if (base.requestType.equalsIgnoreCase("debtrecovery")) {
+			C4validation = comparePEMwithEMVTag("P063:C4:008", "0", "Y") & C4validation;
 		}
 
 		// P063:C4:009 is same as "2"
 		C4validation = comparePEMwithEMVTag("P063:C4:009", "2", "Y") & C4validation;
-		// P063:C4:010 is same as "3"
-		C4validation = comparePEMwithEMVTag("P063:C4:010", "3", "Y") & C4validation;
+		// P063:C4:010 is same as "3" for PreAuth and EODAuth and "1" for Debt Recovery
+		switch (base.requestType.toLowerCase()) {
+		case "debtrecovery":
+			C4validation = comparePEMwithEMVTag("P063:C4:010", "1", "Y") & C4validation;
+			break;
+		default:
+			C4validation = comparePEMwithEMVTag("P063:C4:010", "3", "Y") & C4validation;
+			break;
+		}
+		
 		// P063:C4:011 is same as "3"
 		C4validation = comparePEMwithEMVTag("P063:C4:011", "3", "Y") & C4validation;
 		return C4validation;
@@ -445,24 +502,41 @@ public class helperClass extends BaseUtil {
 		// P013 is same txn Date
 		// P013 is same Exp Date
 
-		// P022 is same as "072"
-		authReqValidation = comparePEMwithEMVTag("P022", "072", "Y") & authReqValidation;
+		// P022 is same as "072" for PreAuth, EODAuth and "012" for debt recovery 
+		switch (base.requestType.toLowerCase()) {
+		case "preauth":
+			authReqValidation = comparePEMwithEMVTag("P022", "072", "Y") & authReqValidation;
+			break;
+		case "eopauth":
+			authReqValidation = comparePEMwithEMVTag("P022", "072", "Y") & authReqValidation;
+			break;
+		case "debtrecovery":
+			authReqValidation = comparePEMwithEMVTag("P022", "012", "Y") & authReqValidation;
+			break;
+
+		}
+		
 		// P023 is same as Emv Tag 5F34
 		authReqValidation = PEMcontainsEMVTag("P023", "5F34", "PEM") & authReqValidation;
 
-		// P025 is "27" for visa, "06" for Maestro/Mastercard
-
-		switch (base.cardScheme.toLowerCase()) {
-		case "visa":
-			authReqValidation = comparePEMwithEMVTag("P025", "27", "Y") & authReqValidation;
-			break;
-		case "mastercard":
-			authReqValidation = comparePEMwithEMVTag("P025", "06", "Y") & authReqValidation;
-			break;
-		case "masestro":
-			authReqValidation = comparePEMwithEMVTag("P025", "06", "Y") & authReqValidation;
-			break;
-
+		// P025 is "01" for Debt Recovery else "27" for visa, "06" for Maestro/Mastercard
+		
+		if (base.requestType.equalsIgnoreCase("debtrecovery")) {
+			authReqValidation = comparePEMwithEMVTag("P025", "01", "Y") & authReqValidation;
+		}
+		
+		else {
+			switch (base.cardScheme.toLowerCase()) {
+			case "visa":
+				authReqValidation = comparePEMwithEMVTag("P025", "27", "Y") & authReqValidation;
+				break;
+			case "mastercard":
+				authReqValidation = comparePEMwithEMVTag("P025", "06", "Y") & authReqValidation;
+				break;
+			case "masestro":
+				authReqValidation = comparePEMwithEMVTag("P025", "06", "Y") & authReqValidation;
+				break;
+			}
 		}
 
 		// P035 is same as emv tag 57. Replace 'D' in tag 57 with '=' and compare
@@ -489,7 +563,7 @@ public class helperClass extends BaseUtil {
 			if (!P035.contains(tag57)) {
 				System.out.println("P035 is not matching with generated partial EMV tag 57. Expected Value:" + tag57 + " Actual Value:" + P035);
 			}
-			authReqValidation = tag57.contains(P035) & authReqValidation ;
+			authReqValidation = P035.contains(tag57) & authReqValidation ;
 		}
 		
 

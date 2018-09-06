@@ -1,0 +1,103 @@
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- REQUEST HDR ---------------
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [ 000] ISO
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [ 001] 026000050
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- TOKEN B2 ---------------
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:001] 0000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:002] 80
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:003] 0000000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:004] D8AC9077FAB7C97D
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:005] 000000000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:006] 000000000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:007] 2000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:008] 0003
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:009] 826
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:010] 826
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:011] 180906
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:012] 00
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:013] 431E2024
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B2:016] 000706011103A0000000000000000000000000000000000000000000000000000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- TOKEN B3 ---------------
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B3:001] 00000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B3:002] 00000808
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B3:003] 0000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B3:004] 00000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B3:005] 25
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B3:006] 0002
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B3:007] 000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B3:008] 000000000000000000000000000000000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- TOKEN B4 ---------------
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:000] 072
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:001] 8
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:002] 1
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:003] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:004] 01
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:005]
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:006]
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:007] 1506
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:008] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:B4:009] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- TOKEN C4 ---------------
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:000] 1
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:001] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:002] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:003] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:004] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:005] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:006] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:007] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:008] 0
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:009] 2
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:010] 3
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:C4:011] 3
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- TOKEN QE ---------------
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:QE:000] 9F6E
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:QE:001] 00
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:QE:002] 0000000000000000000000000000000000000000000000000000000000000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:QE:003] 9F7C
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:QE:004] 06
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:QE:005] 0104303132330000000000000000000000000000000000000000000000000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:QE:006] N
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063:QE:007] N
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- AUTH REQUEST ---------------
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P000] 0100
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P002] 4539790102030473
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P003] 000000
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P004] 000000001901
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P007] 0906045933
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P011] 000014
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P012] 044151
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P013] 0906
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P014] 3012
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P022] 072
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P023] 001
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P025] 27
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P032] 1021649
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P035] 4539790102030473=30122010098800000001
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P037] 060459000014
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P041] 90011311
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P043] TfGM                  Manchester      GB
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P048] 0271021649            A   A
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P049] 826
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063] & 0000600474! B200158 FBF90000800000000000D8AC9077FAB7C97D0000000000000000000000002000000382682618090600431E2024000706011103A0000000000000000000000000000000000000000000000000000000! B300080 7C000000000000000808000000000000250002000000000000000000000000000000000000000000! B400020 07281001      150600! C400012 100000000233! QE00142 9F6E0000000000000000000000000000000000000000000000000000000000000000009F7C060104303132330000000000000000000000000000000000000000000000000000NN
+Sep  6 04:59:33 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P125] 01200HOSTB24 00
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- RESPONSE MSG HEADER ---------------
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [ 000] ISO
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [ 001] 026000057
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 --------------- RESPONSE MSG ---------------
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P000] 0110
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P002] 4539790102030473
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P003] 000000
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P004] 000000001901
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P007] 0906055931
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P011] 000014
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P012] 044151
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P013] 0906
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P025] 27
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P032] 1021649
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P037] 060459000014
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P038] 657391
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P039] 02
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P041] 90011311
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P048] 0271021649            A   A
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P049] 826
+Sep  6 04:59:36 /afc/bin/pemauthemv[13871] (D) RRN 87 CSN 76 [P063] & 0000500182! B500038 00101DF6F09A1C7890ED3031000000000000NN! CH00040 5 000000000000                          ! S800030 M4539791122223338   3012      ! 2000022  000000000161454

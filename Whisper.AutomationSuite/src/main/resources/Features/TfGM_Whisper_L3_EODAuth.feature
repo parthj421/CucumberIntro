@@ -33,6 +33,20 @@ Scenario: Sending Tap from Front Office from BarclayCard3
      When Card is tapped on the FrontOffice validator
      Then A tap should happen
      And EOPAuth PEM logs should match with the expected data
+     
+      	@Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard4
+    Given Card details of Visa BarclayCard 4 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And EOPAuth PEM logs should match with the expected data
+     
+      	@Priority-high     
+Scenario: Sending Tap from Front Office from BarclayCard5
+    Given Card details of Visa BarclayCard 5 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And EOPAuth PEM logs should match with the expected data
       
 	@Priority-high     
 Scenario: Sending Tap from Front Office from BarclayCard6

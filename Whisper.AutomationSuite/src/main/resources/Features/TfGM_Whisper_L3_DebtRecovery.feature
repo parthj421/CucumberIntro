@@ -26,7 +26,25 @@ Scenario: Sending Tap from Front Office from BarclayCard1
      Then A tap should happen
      And DebtRecovery PEM logs should match with the expected data
  
+   	@Priority-high     
+Scenario: Debt Recovery verification of BarclayCard3
+    Given Card details of Visa BarclayCard 3 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And DebtRecovery PEM logs should match with the expected data
+     
+    	@Priority-high     
+Scenario: Debt Recovery verification of BarclayCard4
+    Given Card details of Visa BarclayCard 4 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And DebtRecovery PEM logs should match with the expected data
  
-
+  	@Priority-high     
+Scenario: Debt Recovery verification of BarclayCard5
+    Given Card details of Visa BarclayCard 5 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And DebtRecovery PEM logs should match with the expected data
      
 	

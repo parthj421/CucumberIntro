@@ -67,7 +67,7 @@ public class helperClass extends BaseUtil {
 		// () in Regular Expression
 		// Pattern pattern = Pattern.compile("\\[P063:B2:002\\] (.*?)\n");
 
-		Pattern pattern = Pattern.compile("\\[" + pemTag + "\\] (.*?)\n");
+		Pattern pattern = Pattern.compile("\\:" + pemTag + "\\] (.*?)\n");
 
 		Matcher match = pattern.matcher(base.PEMlog);
 
@@ -103,7 +103,7 @@ public class helperClass extends BaseUtil {
 
 		String pemTagValue = "";
 
-		Pattern pattern = Pattern.compile("\\[" + pemTag + "\\] (.*?)\n");
+		Pattern pattern = Pattern.compile("\\:" + pemTag + "\\] (.*?)\n");
 
 		Matcher match = pattern.matcher(base.PEMlog);
 
@@ -117,14 +117,14 @@ public class helperClass extends BaseUtil {
 
 		boolean isMatch = true;
 
-		Pattern pattern1 = Pattern.compile("\\[" + pemTag1 + "\\] (.*?)\n");
+		Pattern pattern1 = Pattern.compile("\\:" + pemTag1 + "\\] (.*?)\n");
 
 		Matcher match1 = pattern1.matcher(base.PEMlog);
 
 		if (match1.find()) {
 			String pemTagValue1 = match1.group(1);
 
-			Pattern pattern2 = Pattern.compile("\\[" + pemTag1 + "\\] (.*?)\n");
+			Pattern pattern2 = Pattern.compile("\\:" + pemTag1 + "\\] (.*?)\n");
 
 			Matcher match2 = pattern2.matcher(base.PEMlog);
 
@@ -156,7 +156,7 @@ public class helperClass extends BaseUtil {
 	public boolean PEMcontainsEMVTag(String pemTag, String emvTag, String biggerString) {
 		boolean isMatch = true;
 
-		Pattern pattern = Pattern.compile("\\[" + pemTag + "\\] (.*?)\n");
+		Pattern pattern = Pattern.compile("\\:" + pemTag + "\\] (.*?)\n");
 
 		Matcher match = pattern.matcher(base.PEMlog);
 
@@ -248,7 +248,7 @@ public class helperClass extends BaseUtil {
 		B3validation = ( getEmvTags(emvCard, "9F1E") == null ? comparePEMwithEMVTag("P063:B3:001", "00000000", "Y") : comparePEMwithEMVTag("P063:B3:001", "9F1E", "N") ) & B3validation; 
 		
 		// B3:002 Matching with "00000808"
-		B3validation = comparePEMwithEMVTag("P063:B3:002", "00000808", "Y") & B3validation;
+		B3validation = comparePEMwithEMVTag("P063:B3:002", "00080800", "Y") & B3validation;
 		// B3:003 Matching with "0000"
 		B3validation = comparePEMwithEMVTag("P063:B3:003", "0000", "Y") & B3validation;
 		// B3:004 Matching with "00000000"
@@ -392,20 +392,23 @@ public class helperClass extends BaseUtil {
 			C4validation = comparePEMwithEMVTag("P063:C4:008", "0", "Y") & C4validation;
 		}
 
-		// P063:C4:009 is same as "2"
-		C4validation = comparePEMwithEMVTag("P063:C4:009", "2", "Y") & C4validation;
+		// P063:C4:009 is same as "2" for PreAuth and EODAuth and "0" for Debt Recovery
 		// P063:C4:010 is same as "3" for PreAuth and EODAuth and "1" for Debt Recovery
+		// P063:C4:011 is same as "3" for PreAuth and EODAuth and "4" for Debt Recovery
 		switch (base.requestType.toLowerCase()) {
 		case "debtrecovery":
+			C4validation = comparePEMwithEMVTag("P063:C4:009", "0", "Y") & C4validation;
 			C4validation = comparePEMwithEMVTag("P063:C4:010", "1", "Y") & C4validation;
+			C4validation = comparePEMwithEMVTag("P063:C4:011", "4", "Y") & C4validation;
 			break;
 		default:
+			C4validation = comparePEMwithEMVTag("P063:C4:009", "2", "Y") & C4validation;
 			C4validation = comparePEMwithEMVTag("P063:C4:010", "3", "Y") & C4validation;
+			C4validation = comparePEMwithEMVTag("P063:C4:011", "3", "Y") & C4validation;
 			break;
 		}
 		
-		// P063:C4:011 is same as "3"
-		C4validation = comparePEMwithEMVTag("P063:C4:011", "3", "Y") & C4validation;
+
 		return C4validation;
 	}
 

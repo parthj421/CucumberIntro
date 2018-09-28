@@ -9,6 +9,9 @@ import org.json.JSONObject;
 import org.junit.Assert;
 
 import BaseUtil.BaseUtil;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -26,9 +29,27 @@ public class stepDefinition extends BaseUtil{
 		this.base = base;
 	}
 	
+    @Before
+    public void beforeCallingScenario(Scenario sc) 
+    {
+        System.out.println("\n=======================================================================================================\n");
+        System.out.println("***** ----- " + sc.getName());
+        System.out.println("\n=======================================================================================================\n");        
+    }
+	
+    
+    @After
+    public void afterCallingScenario(Scenario sc) 
+    {
+    	System.out.println("\n=======================================================================================================\n");
+    	/*System.out.println("***** ----- " + (base.testStatus ? "PASS" : "FAIL") + " ----- *****");*/
+    	System.out.println("***** ----- End of " + sc.getName()  + "  ----- *****");
+    	System.out.println("\n=======================================================================================================\n");
+    }
+    
+    
 	@Given("^Card details of (.*) (.*) (.*) is available$")
 	public void card_details_of_BarclayCard_is_available(String cardScheme, String cardName, int cardNumber) throws Throwable {
-		
 		
 		helperClass helpClass = new helperClass(base);
 		
@@ -37,10 +58,6 @@ public class stepDefinition extends BaseUtil{
 		base.emvCard = emvJson;
 		base.cardScheme = cardScheme;
 		base.cardNumber = Integer.toString(cardNumber);
-		
-		String emv9F03 = helpClass.getEmvTags(emvJson,"9F1A");
-		
-		System.out.println("Value of EMV-9F03 is: " + emv9F03);
 	}
 	
 	
@@ -80,35 +97,35 @@ public class stepDefinition extends BaseUtil{
 		
 		//Pattern pattern = Pattern.compile("/pemauthemv(.*?) \\(D\\)");  TO ESCAPE the () in Regular Expression
 		
-		
 		helperClass helpClass = new helperClass(base);
+		
+		
+		boolean C4Status = helpClass.validateC4Token(completePEM, base.emvCard);
+		boolean authReqStatus = helpClass.validateAuthRequest(completePEM, base.emvCard);
 		
 		switch (base.requestType.toLowerCase())
 		{
-		case "debtrecovery" :
-			boolean C0Status = helpClass.validateC0Token(completePEM, base.emvCard);
-			Assert.assertTrue("C0 Token is not valid", C0Status);
-		break;
-			
-		default:
-			boolean B2Status = helpClass.validateB2Token(completePEM, base.emvCard);
-			boolean B3Status = helpClass.validateB3Token(completePEM, base.emvCard);	
-			boolean B4Status = helpClass.validateB4Token(completePEM, base.emvCard);
-			Assert.assertTrue("B2 Token is not valid", B2Status);
-			Assert.assertTrue("B3 Token is not valid", B3Status);
-			Assert.assertTrue("B4 Token is not valid", B4Status);	
+			case "debtrecovery" :
+				boolean C0Status = helpClass.validateC0Token(completePEM, base.emvCard);
+				Assert.assertTrue("C0 Token is not valid", C0Status);
+			break;
 				
-			if(completePEM.contains("TOKEN QE")) {
-				boolean QEStatus = helpClass.validateQEToken(completePEM, base.emvCard);
-				Assert.assertTrue("QE Token is not valid", QEStatus);
-			}
-		break;
+			default:
+					boolean B2Status = helpClass.validateB2Token(completePEM, base.emvCard);
+					boolean B3Status = helpClass.validateB3Token(completePEM, base.emvCard);	
+					boolean B4Status = helpClass.validateB4Token(completePEM, base.emvCard);
+					if(completePEM.contains("TOKEN QE")) {
+						boolean QEStatus = helpClass.validateQEToken(completePEM, base.emvCard);
+						Assert.assertTrue("QE Token is not valid", QEStatus);
+					}
+					
+					Assert.assertTrue("B2 Token is not valid", B2Status);
+					Assert.assertTrue("B3 Token is not valid", B3Status);
+					Assert.assertTrue("B4 Token is not valid", B4Status);
+			break;
 		}
 		
-		boolean C4Status = helpClass.validateC4Token(completePEM, base.emvCard);
-		Assert.assertTrue("C4 Token is not valid", C4Status);
-		
-		boolean authReqStatus = helpClass.validateAuthRequest(completePEM, base.emvCard);
+		Assert.assertTrue("C4 Token is not valid", C4Status);		
 		Assert.assertTrue("Auth Request is not valid", authReqStatus);
 		
 

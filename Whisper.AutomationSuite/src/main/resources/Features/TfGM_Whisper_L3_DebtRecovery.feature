@@ -20,7 +20,7 @@ Feature: Debt Recovery Auth is Validated
  #     | $20 | $80 |  |
  
   	@Priority-high     
-Scenario: Sending Tap from Front Office from BarclayCard1
+Scenario: Debt Recovery verification of BarclayCard1
     Given Card details of Visa BarclayCard 1 is available
      When Card is tapped on the FrontOffice validator
      Then A tap should happen

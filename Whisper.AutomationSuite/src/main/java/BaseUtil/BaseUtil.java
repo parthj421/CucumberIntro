@@ -11,6 +11,7 @@ public class BaseUtil {
 	public String cardNumber;
 	public String txnAmount;	
 	public String partialURL;
+	public boolean testStatus;
 	
 
 }

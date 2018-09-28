@@ -49,7 +49,7 @@ public class helperClass extends BaseUtil {
 		}
 		input.close();
 
-		System.out.println("Complete EMV Captured: " + completeEMV);
+		//System.out.println("Complete EMV Captured: " + completeEMV);
 
 		emvJson = new JSONObject(completeEMV);
 
@@ -506,21 +506,26 @@ public class helperClass extends BaseUtil {
 		// P013 is same Exp Date
 
 		// P022 is same as "072" for PreAuth, EODAuth and "012" for debt recovery 
+		// P023 is same as Emv Tag 5F34 for PreAuth and EOP Auth and not available in Debt Recovery
 		switch (base.requestType.toLowerCase()) {
 		case "preauth":
 			authReqValidation = comparePEMwithEMVTag("P022", "072", "Y") & authReqValidation;
+			authReqValidation = PEMcontainsEMVTag("P023", "5F34", "PEM") & authReqValidation;
 			break;
 		case "eopauth":
 			authReqValidation = comparePEMwithEMVTag("P022", "072", "Y") & authReqValidation;
+			authReqValidation = PEMcontainsEMVTag("P023", "5F34", "PEM") & authReqValidation;
 			break;
 		case "debtrecovery":
 			authReqValidation = comparePEMwithEMVTag("P022", "012", "Y") & authReqValidation;
+			
 			break;
 
 		}
 		
-		// P023 is same as Emv Tag 5F34
-		authReqValidation = PEMcontainsEMVTag("P023", "5F34", "PEM") & authReqValidation;
+		
+		
+		
 
 		// P025 is "01" for Debt Recovery else "27" for visa, "06" for Maestro/Mastercard
 		

@@ -91,40 +91,30 @@ public class stepDefinition extends BaseUtil{
 		
 		input.close();	
 		
-		//System.out.println("Complete PEM File: " + completePEM);
-		
 		base.PEMlog = completePEM;
 		
 		//Pattern pattern = Pattern.compile("/pemauthemv(.*?) \\(D\\)");  TO ESCAPE the () in Regular Expression
 		
 		helperClass helpClass = new helperClass(base);
 		
-		
 		boolean C4Status = helpClass.validateC4Token(completePEM, base.emvCard);
 		boolean authReqStatus = helpClass.validateAuthRequest(completePEM, base.emvCard);
+		boolean C0Status = helpClass.validateC0Token(completePEM, base.emvCard);
+		boolean B2Status = helpClass.validateB2Token(completePEM, base.emvCard);
+		boolean B3Status = helpClass.validateB3Token(completePEM, base.emvCard);	
+		boolean B4Status = helpClass.validateB4Token(completePEM, base.emvCard);
+		boolean F3Status = helpClass.validateF3Token(completePEM, base.emvCard);
 		
-		switch (base.requestType.toLowerCase())
-		{
-			case "debtrecovery" :
-				boolean C0Status = helpClass.validateC0Token(completePEM, base.emvCard);
-				Assert.assertTrue("C0 Token is not valid", C0Status);
-			break;
-				
-			default:
-					boolean B2Status = helpClass.validateB2Token(completePEM, base.emvCard);
-					boolean B3Status = helpClass.validateB3Token(completePEM, base.emvCard);	
-					boolean B4Status = helpClass.validateB4Token(completePEM, base.emvCard);
-					if(completePEM.contains("TOKEN QE")) {
-						boolean QEStatus = helpClass.validateQEToken(completePEM, base.emvCard);
-						Assert.assertTrue("QE Token is not valid", QEStatus);
-					}
-					
-					Assert.assertTrue("B2 Token is not valid", B2Status);
-					Assert.assertTrue("B3 Token is not valid", B3Status);
-					Assert.assertTrue("B4 Token is not valid", B4Status);
-			break;
+		if(completePEM.contains("TOKEN QE")) {
+			boolean QEStatus = helpClass.validateQEToken(completePEM, base.emvCard);
+			Assert.assertTrue("QE Token is not valid", QEStatus);
 		}
 		
+		Assert.assertTrue("B2 Token is not valid", B2Status);
+		Assert.assertTrue("B3 Token is not valid", B3Status);
+		Assert.assertTrue("B4 Token is not valid", B4Status);
+		Assert.assertTrue("F3 Token is not valid", F3Status);
+		Assert.assertTrue("C0 Token is not valid", C0Status);
 		Assert.assertTrue("C4 Token is not valid", C4Status);		
 		Assert.assertTrue("Auth Request is not valid", authReqStatus);
 		

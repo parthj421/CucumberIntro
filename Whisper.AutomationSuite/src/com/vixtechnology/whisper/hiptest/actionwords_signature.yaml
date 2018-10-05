@@ -1,0 +1,296 @@
+---
+- name: A Terminal is connected with the Network
+  uid: e13e531b-5b32-4c3c-9359-1bea79c37db5
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A valid card is tapped on Terminal
+  uid: d88e0f03-099e-4b3f-a10b-5ff18c691210
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Terminal should display green lights and the card should be approved
+  uid: 011c43d3-a235-423a-a74c-ebc91cc7faac
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A visa card is available to generate the tap
+  uid: 6c9ccec0-c4d9-4ec8-9600-a24e757f4df4
+  parameters:
+  - name: cardSheme
+  - name: __datatable
+  - name: __free_text
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'a Terminal is configured '
+  uid: 7b999d02-7a90-4232-b14d-8ceb865797c0
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Visa card is tapped on the Terminal
+  uid: d361c9b5-d457-42f1-8477-ce61a442fc9d
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: a Tap is generated and progress of tap is monitored on WhisperMon
+  uid: 58c45fd9-fe74-461f-9dc1-e793147ca144
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Tap is received at the Back Office with same last 4 digits of the Visa card
+  uid: c71cc4c8-d831-4d99-bc7c-42701baabb8e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Back Office is configured to receive the taps from Terminal
+  uid: d43c2af1-fcbd-433f-8257-fbbe9d60d74b
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A =CardScheme is available to generate the tap
+  uid: dce4c666-bac2-4141-aac0-147d4c7a7a87
+  parameters:
+  - name: cardSheme
+  - name: __datatable
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: '"CardScheme" is tapped on the Terminal'
+  uid: a8470bfe-957d-485b-accf-22661742d54d
+  parameters:
+  - name: CardScheme
+  - name: Param2
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Tap is received at the Back Office with same last 4 digits of the "CardScheme"
+  uid: 2ab99d6d-a723-4fa9-93a9-07cac8bb1f17
+  parameters:
+  - name: CardScheme
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'a tap is generated '
+  uid: c69718ee-d45b-4129-bdcb-c91bc9aff60b
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Card Serial Number is captured from WhisperMon logs
+  uid: fba0e51b-9c33-4a3f-b44e-ce645031061e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: a PreAuth request is created in cut_emv_offline_payment table and sent to
+    PEM
+  uid: 40950ac5-5190-4043-97f0-2c3f3ee13438
+  parameters:
+  - name: __free_text
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: PEM receives PreAuth Approved response from Acquirer
+  uid: a6db889e-4f39-4287-b644-d256cd19fb17
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A Mastercard is available to generate the tap
+  uid: cf2eded7-b119-4891-ad1c-4c27dfe3c33e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A Visa card is available to generate the tap
+  uid: 7ee937a9-1299-48e5-9401-ef576ecc45cc
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: '"CardScheme" is tapped on the Terminal for the first time in the day'
+  uid: 84315a7b-ee3d-434d-8727-4f6bc913f06e
+  parameters:
+  - name: CardScheme
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: First tap of the Mastercard has been approved
+  uid: 911af13b-2311-4717-a53f-8ef8693239a0
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Mastercard is tapped on the Terminal second time
+  uid: f4b2e3c2-1356-4e79-a70c-165536679766
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: a PreAuth request is not created in cut_emv_offline_payment table
+  uid: c1133d39-b103-43aa-9684-85e2501c1e65
+  parameters:
+  - name: __free_text
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A "CardScheme" is available to generate the tap
+  uid: 5d0ae7e9-2c9e-4034-bf00-1df073d786a9
+  parameters:
+  - name: CardScheme
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: PEM receives PreAuth Declined response from Acquirer
+  uid: 8c5a93ba-51cc-4eff-aba7-daabca4b1e26
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Visa card is added to the denied list
+  uid: 5f5255bc-d189-49a0-b38b-520cacfc9539
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Whisper CS is configured to add declined card to denied list
+  uid: 5152a3f8-1a01-482b-9f8d-64e75c43af88
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A Visa card that is not in DenyList is available
+  uid: c2da3e2c-4da2-4cb0-8146-59f8ace53573
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice sends a request to add the card on DenyList
+  uid: 8f44c3cf-ebf5-4240-9e17-9867e1f00baa
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: card is added to DenyList
+  uid: 9d217423-907a-4d44-a205-077987fbbbb3
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: card is removed from the DenyList
+  uid: 6523235b-5a48-4a94-93fa-ce4e5edc60a4
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice sends a request to remove the card from DenyList
+  uid: d5a34276-c0ff-4eae-95c6-215042207acc
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: a Status List Update message is sent to Backoffice
+  uid: 27bdc762-ae5d-4d26-ac80-144bbabf0026
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A Visa card that is not in PilotList is available
+  uid: 796194f5-604e-4ee5-aa6a-bf68bc53a414
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice sends a request to add the card on PilotList
+  uid: d5ae9f98-7618-4cc4-a396-2223a2ae90c4
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: card is added to PilotList
+  uid: 72766d7c-9591-4c9f-98e9-a3dec5c5d66e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice sends a request to remove the card from PilotList
+  uid: 19bc6d07-5414-4ae5-88ff-ef50e3163c89
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: card is removed from the PilotList
+  uid: ba8dcc4b-262d-4358-ad4a-2193d4a523c0
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Two taps marking end of a journey are received by BackOffice
+  uid: df746077-603f-4832-8075-d59f9c08b197
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'BackOffice calculates fares '
+  uid: c19ea45e-e81a-4bd2-ae7f-a6444abf22f3
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice sends the fundsreqest of Amount against tapped card
+  uid: 57bf8122-4db7-4981-9b04-812befc93ebc
+  parameters:
+  - name: Amount
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: " Whisper receives the  funds request against the card"
+  uid: 59566148-da2f-45fa-9380-e1e1ff584d85
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice has send a FundRequest of 10.50 for a visa card
+  uid: 901781a9-1632-43d4-bc85-26e0e64733ed
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: End of Period Script is run
+  uid: 22f274a5-febf-4a59-b729-55e3f2219de5
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: an End of Period Authorisation request with Authorisation amount 10.50 is
+    sent for the card
+  uid: 3d92da94-8d83-4ff9-9024-a1616dfa8dcc
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: an Inspection tap is sent to BackOffice
+  uid: 595b1df0-9c50-4f78-9cc9-a4661a58f2ec
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice determines to charge a Penalty to the card
+  uid: cfa87107-5d8b-412c-93ea-90a09009e03f
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice sends a Penalty request of amount $ 13.50 for a visa card
+  uid: 7afaa5df-be6d-4287-926f-b4cdbd58ebaf
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Whisper creates a Penalty Auth request
+  uid: b7fe619c-984d-4453-beee-8a708c264712
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Bank approves Penalty Auth request
+  uid: 1b9d4563-c2d4-4f45-82f9-c3b9deffa581
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Settlement request of amount $ 13.50 is sent
+  uid: 1b9b2ef9-5f9b-49c3-96d3-f1833aa24e8c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Whisper creates a Penalty Auth request of $ 13.05
+  uid: 6af54553-a7fe-4921-80eb-57f75087a98a
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice sends a Penalty request of amount $ 13.05 for a visa card
+  uid: e0427ad5-3f09-4e7d-a624-f33767807b18
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Bank declines Penalty Auth request
+  uid: a45b49a5-7523-4dd8-86f2-2a8f07f14f8b
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: "$ 13.05 is added to the Debt"
+  uid: fa32ba99-4aeb-4b0a-bd4f-78d7eda4cf78
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice determines to send Refund to a card
+  uid: '06139765-4018-44d7-b329-4307d1dd2792'
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice determines to charge a Penalty to a card
+  uid: 79eed8a2-c4d6-4f5f-a38e-959b241114a0
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BackOffice sends a Refund request of amount $ 14.50 for a visa card
+  uid: 2688ad35-9810-490c-9fe9-1ec2bb4688df
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Settlement request of amount $ 14.50 is sent
+  uid: 90a7715f-8d22-46f1-aa70-a339c241bb7d
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Whisper does not send the PreAuth request
+  uid: 25c0835f-102b-4e5b-baa9-a868d20de339
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: A card has pending debt of $18.60 and is on Deny List
+  uid: 608175fc-ce85-4c85-8c0e-b8df95dfe0d8
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Debt Recovery script runs
+  uid: 924903d5-8b12-4f9e-b2a3-c5b8803b65f1
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Whisper creates a Debt Auth request of $18.60
+  uid: d1c921e1-5e6f-44da-a9e8-a30eaeb9108a
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Bank approves Debt Auth request
+  uid: e6ac3e1c-ee00-42a2-9d24-7e6d14ef5b14
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Settlement request of amount $ 18.60 is sent
+  uid: 541548b3-fc2c-4537-bb53-6313851944c9
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Whisper creates a Debt Auth request of $18.55
+  uid: 00d164b3-05b7-4647-a80b-acf619f95d41
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Bank declines Debt Auth request
+  uid: 9c163a41-26cd-4021-aa4c-6cb9b357a355
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: " card debt amount remains the same "
+  uid: '059f5043-de7a-44c4-9249-73c734c48288'
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Whisper CS is configured to does not add declined card to denied list
+  uid: 7c52f21c-e7f1-4235-9884-01c543ada72f
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Visa card is not added to the denied list
+  uid: 20460f88-ff9a-42d2-a81e-70fa100f0d8b
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: BO receives Funds Result message
+  uid: 141dde1e-4d0c-4145-9145-06a29ef48cdf
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e

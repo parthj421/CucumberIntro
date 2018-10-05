@@ -1,0 +1,40 @@
+package {{{ context.package }}};
+
+import com.vixtechnology.whip.framework.WhipTest;
+import com.vixtechnology.whip.framework.Log;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.Scenario;
+import cucumber.api.DataTable;
+import cucumber.api.java.en.*;
+import cucumber.runtime.java.guice.ScenarioScoped;
+
+@ScenarioScoped
+public class StepDefinitions extends WhipTest
+{{#curly}}{{#indent}}
+public Actionwords {{{ context.call_prefix }}} = Factory.createActionwords();
+
+@Before
+public void beforeCallingScenario(Scenario sc) 
+{{#curly}}{{#indent}}
+Log.info("\n=======================================================================================================\n");
+Log.info("***** ----- " + sc.getName());
+Log.info("\n=======================================================================================================\n");
+
+actionwords.beforeCallingScenario();
+{{/indent}}
+{{/curly}}
+
+@After
+public void afterCallingScenario() 
+{{#curly}}{{#indent}}
+actionwords.afterCallingScenario();
+{{/indent}}
+{{/curly}}
+
+
+{{#each rendered_children.actionwords}}{{{this}}}
+{{/each}}
+{{/indent}}
+{{/curly}}

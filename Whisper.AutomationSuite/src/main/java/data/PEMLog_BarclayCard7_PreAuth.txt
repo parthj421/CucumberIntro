@@ -1,85 +1,109 @@
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 --------------- REQUEST HDR ---------------
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [ 000] ISO
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [ 001] 026000050
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 --------------- TOKEN B2 ---------------
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:001] 0000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:002] 00
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:003] 0400000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:004] 7B223932DC10C606
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:005] 000000000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:006] 000000000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:007] 1B80
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:008] 0001
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:009] 826
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:010] 826
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:011] 180828
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:012] 00
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:013] EF3E4B78
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B2:016] 00320110A00000000000000000000000000000FF0000000000000000000000000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 --------------- TOKEN B3 ---------------
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B3:001] 00000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B3:002] 00000808
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B3:003] 0000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B3:004] 00000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B3:005] 25
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B3:006] 0002
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B3:007] 3F0002
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B3:008] 0007A0000000041010000000000000000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 --------------- TOKEN B4 ---------------
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:000] 072
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:001] 8
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:002] 1
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:003] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:004] 01
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:005]
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:006]
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:007] 1506
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:008] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:B4:009] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 --------------- TOKEN C4 ---------------
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:000] 1
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:001] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:002] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:003] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:004] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:005] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:006] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:007] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:008] 0
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:009] 2
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:010] 3
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:C4:011] 3
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 --------------- TOKEN F3 ---------------
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:F3:000] 02
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:F3:001] 03
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 --------------- TOKEN QE ---------------
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:QE:000] 9F6E
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:QE:001] 07
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:QE:002] 0056111230300000000000000000000000000000000000000000000000000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:QE:003] 9F7C
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:QE:004] 00
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:QE:005] 0000000000000000000000000000000000000000000000000000000000000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:QE:006] N
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063:QE:007] N
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 --------------- AUTH REQUEST ---------------
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P000] 0100
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P002] 5434600012341253
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P003] 000000
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P004] 000000000005
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P007] 0828054412
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P011] 000024
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P012] 054012
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P013] 0828
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P014] 3012
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P022] 072
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P023] 001
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P025] 27
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P032] 1021649
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P035]
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P037] 280544000024
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P041] 90011311
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P043] TfGM                  Manchester      GB
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P048] 0271021649            A   A
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P049] 826
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P063] & 0000700488! B200158 FBF900000004000000007B223932DC10C6060000000000000000000000001B80000182682618082800EF3E4B7800320110A00000000000000000000000000000FF0000000000000000000000000000! B300080 7F0000000000000008080000000000002500023F00020007A0000000041010000000000000000000! B400020 07281001      150600! C400012 100000000233! F300004 0203! QE00142 9F6E0700561112303000000000000000000000000000000000000000000000000000009F7C000000000000000000000000000000000000000000000000000000000000000000NN
-Aug 28 05:44:12 /afc/bin/pemauthemv[12643] (D) RRN 1535434812 CSN 92 [P125] 01200HOSTB24 00
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- REQUEST HDR ---------------
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [ 000] ISO
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [ 001] 026000050
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- TOKEN B2 ---------------
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:001] 0000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:002] 40
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:003] 0000000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:004] 46A32BEE90BF3289
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:005] 000000000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:006] 000000000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:007] 1B80
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:008] 0001
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:009] 826
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:010] 826
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:011] 181005
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:012] 00
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:013] 5B666475
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B2:016] 00320110A00000000000000000000000000000FF0000000000000000000000000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- TOKEN B3 ---------------
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B3:001] 00000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B3:002] 00080800
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B3:003] 0000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B3:004] 00000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B3:005] 25
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B3:006] 0002
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B3:007] 3F0002
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B3:008] 0007A0000000041010000000000000000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- TOKEN B4 ---------------
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:000] 072
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:001] 8
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:002] 1
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:003] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:004] 01
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:005]
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:006]
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:007] 1506
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:008] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:B4:009] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- TOKEN C4 ---------------
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:000] 1
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:001] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:002] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:003] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:004] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:005] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:006] 4
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:007] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:008] 0
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:009] 2
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:010] 3
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:C4:011] 3
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- TOKEN F3 ---------------
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:F3:000] 03
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:F3:001] 03
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- TOKEN QE ---------------
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:QE:000] 9F6E
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:QE:001] 07
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:QE:002] 0056111230300000000000000000000000000000000000000000000000000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:QE:003] 9F7C
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:QE:004] 20
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:QE:005] 2020202020202020202020202020202020202020000000000000000000000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:QE:006] N
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063:QE:007] N
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- AUTH REQUEST ---------------
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P000] 0100
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P002] 5434600012341253
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P003] 000000
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P004] 000000000010
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P007] 1005043237
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P011] 000004
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P012] 043113
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P013] 1005
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P014] 3012
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P022] 072
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P023] 001
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P025] 06
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P032] 1021649
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P035] 5434600012341253=30122010098800000001
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P037] 050432000004
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P041] 90011311
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P043] TfGM                  Manchester      GB
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P048] 0271021649            A   A
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P049] 826
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P063] & 0000700488! B200158 FBF9000040000000000046A32BEE90BF32890000000000000000000000001B800001826826181005005B66647500320110A00000000000000000000000000000FF0000000000000000000000000000! B300080 7F0000000000000808000000000000002500023F00020007A0000000041010000000000000000000! B400020 07281001      150600! C400012 100000400233! F300004 0303! QE00142 9F6E0700561112303000000000000000000000000000000000000000000000000000009F7C202020202020202020202020202020202020202020000000000000000000000000NN
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0100:P125] 01200HOSTB24 00
+Oct  5 04:32:37 /afc/bin/pemauthemv[ 2996] (D) TransactionGenerator::packAuthMessage: Message creation successful for txn with RRN 42 CSN 92
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) PaymentGatewayController::findAndProcessResponse Received response, Decoding for txn with RRN 42 CSN 92
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- RESPONSE MSG HEADER ---------------
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [ 000] ISO
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [ 001] 026000057
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 --------------- RESPONSE MSG ---------------
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P000] 0110
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P002] 5434600012341253
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P003] 000000
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P004] 000000000010
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P007] 1005053236
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P011] 000004
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P012] 043113
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P013] 1005
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P025] 06
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P032] 1021649
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P037] 050432000004
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P038] 339191
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P039] 00
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P041] 90011311
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P048] 0271021649            A   A
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P049] 826
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) RRN 42 CSN 92 [0110:P063] & 0000300092! B500038 0010A5A1933BF32D445E3030000000000000NN! 2000022  HNR0004131005
+Oct  5 04:32:40 /afc/bin/pemauthemv[ 2996] (D) WhisperMon: UDGenerator::generateUD: auth response UD generated for txn with RRN 42 CSN 92

@@ -296,10 +296,26 @@ public class helperClass extends BaseUtil {
 		return B4validation;
 	}
 	
+	
+	public boolean validateF3Token(String PEMlog, JSONObject emvCard) throws Throwable {
+
+		boolean F3validation = true;
+		
+		if (base.cardScheme.equalsIgnoreCase("mastercard")) {
+		// P063:F3:000 is same as '03'
+		F3validation = comparePEMwithEMVTag("P063:F3:000", "03", "Y") & F3validation;
+		// P063:F3:001 is same as "03"
+		F3validation = comparePEMwithEMVTag("P063:F3:001", "03", "Y") & F3validation;
+		}
+		return F3validation;
+	}
+	
+	
 	public boolean validateC0Token(String PEMlog, JSONObject emvCard) throws Throwable {
 		
 		boolean C0validation = true;
 		
+		if (base.requestType.equalsIgnoreCase("debtrecovery")) {
 		//P063:C0:000 is same as "    " (4 spaces)
 	//	C0validation = comparePEMwithEMVTag("P063:C0:000", "    ", "Y") & C0validation;
 		//P063:C0:001 is same as " "
@@ -324,9 +340,8 @@ public class helperClass extends BaseUtil {
 		C0validation  = comparePEMwithEMVTag("P063:C0:010", "0", "Y") & C0validation;
 		//P063:C0:011 is same as " "
 	//	C0validation  = comparePEMwithEMVTag("P063:C0:011", " ", "Y") & C0validation;
-		
+		}
 		return C0validation;
-		
 	}
 
 	public boolean validateC4Token(String PEMlog, JSONObject emvCard) throws Throwable {
@@ -355,11 +370,18 @@ public class helperClass extends BaseUtil {
 		// P063:C4:005 is same as "0"
 		C4validation = comparePEMwithEMVTag("P063:C4:005", "0", "Y") & C4validation;
 
-		// P063:C4:006 is "9" for Visa/MasterCard Account Verification(PreAuth) Request, "0" for Visa/MasterCard EODAuth Request and Debt Recovery
+		// P063:C4:006 is "9" for Visa, "4" for MasterCard Account Verification(PreAuth) Request, "0" for Visa/MasterCard EODAuth Request and Debt Recovery
 
 		switch (base.requestType.toLowerCase()) {
 		case "preauth":
-			C4validation = comparePEMwithEMVTag("P063:C4:006", "9", "Y") & C4validation;
+			if (base.cardScheme.equalsIgnoreCase("visa")) {
+				C4validation = comparePEMwithEMVTag("P063:C4:006", "9", "Y") & C4validation;	
+			}
+			
+			else if (base.cardScheme.equalsIgnoreCase("mastercard")) {
+				C4validation = comparePEMwithEMVTag("P063:C4:006", "4", "Y") & C4validation;	
+			}
+			
 			break;
 		default:
 			C4validation = comparePEMwithEMVTag("P063:C4:006", "0", "Y") & C4validation;
@@ -449,6 +471,7 @@ public class helperClass extends BaseUtil {
 		return QEvalidation;
 	}
 
+	
 	public boolean validateAuthRequest(String PEMlog, JSONObject emvCard) throws Throwable {
 
 		boolean authReqValidation = true;
@@ -522,9 +545,6 @@ public class helperClass extends BaseUtil {
 			break;
 
 		}
-		
-		
-		
 		
 
 		// P025 is "01" for Debt Recovery else "27" for visa, "06" for Maestro/Mastercard

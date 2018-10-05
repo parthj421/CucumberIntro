@@ -1,0 +1,26 @@
+
+Build configuration (version 3.18.8000.cr)
+Name ....... whip_pulse_daf_hiptest 1.17.0043 cr (WIN)
+Version .... 1.17.0043
+Project .... cr
+DateTime ... Mon Oct  1 11:50:34 2018
+PERL ....... c:/perl/bin/perl.exe
+BIN  ....... w:/core_devl2/BIN.win32
+TOOLS ...... w:/core_devl2/TOOLS
+CONFIG ..... w:/core_devl2/CFG
+MACHTYPE ... win32
+BUILDFILTER. VS2012 VS2012_X64
+DPKG_STORE.. 
+DPKG ....... w:/dpkg_archive
+DPKG_REPLI . 
+DPKG_CACHE . 
+DPKG_LOCAL . 
+DPKG_SBOX .. 
+Sandbox .... Development
+Platforms .. JAVA
+Build for .. NOBUILD - GBE_BUILDFILTER prevents any targets being built
+Interface .. local
+Interface .. interface
+LinkPkgArchive .. whip_framework (5.0.58000.cr) - Ignored
+LinkPkgArchive .. whip_pulse (2.1.955000.cr) - Ignored
+LinkPkgArchive .. whip_pulse_hiptest_support (1.0.14284.cr) - Ignored

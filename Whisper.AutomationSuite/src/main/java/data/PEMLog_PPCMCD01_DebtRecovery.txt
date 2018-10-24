@@ -1,0 +1,95 @@
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- REQUEST HDR ---------------
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [ 000] ISO
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [ 001] 026000050
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- TOKEN C4 ---------------
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:000] 1
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:001] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:002] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:003] 1
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:004] 1
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:005] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:006] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:007] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:008] 9
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:009] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:010] 1
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C4:011] 4
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- TOKEN C0 ---------------
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:000]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:001]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:002]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:003]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:004] 1
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:005]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:006]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:007] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:008]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:009] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:010] 0
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:C0:011]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- TOKEN CH ---------------
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:000]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:001]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:002]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:003]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:004]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:005] S
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:006]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:007]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:008]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:009]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:010]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:CH:011]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- TOKEN 20 ---------------
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:20:000]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:20:001] MCC01105Q1012
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:20:002]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:20:003]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:20:004]
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- TOKEN F3 ---------------
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:F3:000] 07
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063:F3:001] 03
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- AUTH REQUEST ---------------
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P000] 0100
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P002] 5413330089600010
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P003] 000000
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P004] 000000001557
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P007] 1015033455
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P011] 000008
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P012] 080552
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P013] 1012
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P014] 2512
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P022] 012
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P025] 01
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P032] 1021647
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P037] 150334000008
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P041] 10011001
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P043] TfGM                  Manchester      GB
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P048] 0271021647            A   A
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P049] 826
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P063] & 0000600166! C400012 100110009014! C000026                   1  0 00 ! CH00040                    S                    ! 2000022  MCC01105Q1012        ! F300004 0703
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0100:P125] 01200HOSTB24 00
+Oct 15 03:34:55 /afc/bin/pemauthemv[18003] (D) TransactionGenerator::packAuthMessage: Message creation successful for txn with RRN 21 CSN 251
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) PaymentGatewayController::findAndProcessResponse Received response, Decoding for txn with RRN 21 CSN 251
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- RESPONSE MSG HEADER ---------------
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [ 000] ISO
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [ 001] 026000056
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 --------------- RESPONSE MSG ---------------
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P000] 0110
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P002] 5413330089600010
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P003] 000000
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P004] 000000001557
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P007] 1015043454
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P011] 000008
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P012] 080552
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P013] 1012
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P025] 01
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P032] 1021647
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P037] 150334000008
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P039] 30
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P041] 10011001
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P048] 0271021647            A   A
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P049] 826
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P063] & 0000300094! CH00040   000000000000     S                    ! 2000022  MCC01105Q1012
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) RRN 21 CSN 251 [0110:P100] 4
+Oct 15 03:34:57 /afc/bin/pemauthemv[18003] (D) WhisperMon: UDGenerator::generateUD: auth response UD generated for txn with RRN 21 CSN 251

@@ -58,6 +58,7 @@ public class stepDefinition extends BaseUtil{
 		base.emvCard = emvJson;
 		base.cardScheme = cardScheme;
 		base.cardNumber = Integer.toString(cardNumber);
+		base.cardName = cardName;
 	}
 	
 	
@@ -81,7 +82,7 @@ public class stepDefinition extends BaseUtil{
 		String completePEM = "" ;
 		base.requestType = authRequestType;
 		
-		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_BarclayCard" + base.cardNumber + "_" + base.requestType + ".txt"));
+		Scanner input = new Scanner (new File ("src/main/java/data/PEMLog_" + base.cardName  + base.cardNumber + "_" + base.requestType + ".txt"));
 		
 		while (input.hasNext())
 		{

@@ -55,16 +55,9 @@ Scenario: PreAuth verification of BarclayCard5
      Then A tap should happen
      And PreAuth PEM logs should match with the expected data 
      
+       
      
-     @Priority-high     
-Scenario: PreAuth verification of BarclayCard6
-     Given Card details of Visa BarclayCard 6 is available
-     When Card is tapped on the FrontOffice validator
-     Then A tap should happen
-     And PreAuth PEM logs should match with the expected data 
-     
-     
-          @Priority-high     
+      @Priority-high     
 Scenario: PreAuth verification of BarclayCard7
      Given Card details of Mastercard BarclayCard 7 is available
      When Card is tapped on the FrontOffice validator
@@ -72,13 +65,28 @@ Scenario: PreAuth verification of BarclayCard7
      And PreAuth PEM logs should match with the expected data 
      
           
-          @Priority-high     
+  	@Priority-high     
 Scenario: PreAuth verification of BarclayCard8
      Given Card details of Mastercard BarclayCard 8 is available
      When Card is tapped on the FrontOffice validator
      Then A tap should happen
      And PreAuth PEM logs should match with the expected data 
      
+     
+    @Priority-high     
+Scenario: PreAuth verification of PPCMAP10
+     Given Card details of Mastercard PPCMAP 10 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data 
+     
+     
+         @Priority-high     
+Scenario: PreAuth verification of PPCMCD01
+     Given Card details of Mastercard PPCMCD0 1 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And PreAuth PEM logs should match with the expected data 
 
      
      

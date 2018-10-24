@@ -46,5 +46,19 @@ Scenario: Debt Recovery verification of BarclayCard5
      When Card is tapped on the FrontOffice validator
      Then A tap should happen
      And DebtRecovery PEM logs should match with the expected data
+ 
+ 
+   	@Priority-high     
+Scenario: Debt Recovery verification of BarclayCard8
+    Given Card details of Mastercard BarclayCard 8 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And DebtRecovery PEM logs should match with the expected data    
      
+       	@Priority-high     
+Scenario: Debt Recovery verification of PPCMCD01
+    Given Card details of Mastercard PPCMCD0 1 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And DebtRecovery PEM logs should match with the expected data
 	

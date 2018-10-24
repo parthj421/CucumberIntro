@@ -54,9 +54,17 @@ Scenario: EOP Auth Verification of BarclayCard5
      Then A tap should happen
      And EOPAuth PEM logs should match with the expected data
       
-	@Priority-high     
-Scenario: EOP Auth Verification of BarclayCard6
-    Given Card details of Visa BarclayCard 6 is available
+  
+  	@Priority-high     
+Scenario: EOP Auth Verification of BarclayCard8
+    Given Card details of Mastercard BarclayCard 8 is available
+     When Card is tapped on the FrontOffice validator
+     Then A tap should happen
+     And EOPAuth PEM logs should match with the expected data   
+     
+     	@Priority-high     
+Scenario: EOP Auth Verification of PPCMCD01
+    Given Card details of Mastercard PPCMCD0 1 is available
      When Card is tapped on the FrontOffice validator
      Then A tap should happen
      And EOPAuth PEM logs should match with the expected data
